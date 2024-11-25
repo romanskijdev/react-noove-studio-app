@@ -1,0 +1,211 @@
+.brief {
+  width: 100%;
+  padding: 85px 40px;
+  text-align: left;
+
+  & .brief_form {
+    margin: 140px 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5rem;
+    & .brief_object {
+      padding: 10px;
+      width: 85%;
+      height: 30vh;
+      align-items: center;
+      justify-content: center;
+    }
+    & form {
+
+      & div {
+        & .submitButton {
+          cursor: pointer;
+          background-color: transparent;
+          border-radius: 15px;
+          display: block;
+          border: 1px solid #171717;
+          width: 100%;
+          padding: 33px;
+          margin: 0 auto;
+          font-size: clamp(16px, 5vw, 24px);
+          transition: .4s;
+          font-weight: 450;
+          line-height: 115%; /* 18.4px */
+          letter-spacing: -0.84px;
+
+          &:hover {
+            background-color: #000;
+            color: #fff;
+          }
+        }
+        & .active {
+          background-color: black;
+          color: #fff;
+        }
+        & p {
+          color: var(--black-65, rgba(23, 23, 23, 0.65));
+          text-align: center;
+          font-family: "Suisse Intl Regular", serif;;
+          font-size: clamp(12px, 5vw, 16px);
+          font-style: normal;
+          font-weight: 450;
+          line-height: 115%; /* 18.4px */
+          letter-spacing: -0.56px;
+          margin-top: 10px;
+
+          & .privacyLink {
+            padding-left: 0;
+            padding-right: 0;
+            padding-bottom: 3px;
+            color: var(--Black, #171717);
+            font-size: clamp(12px, 5vw, 16px);
+            font-style: normal;
+            font-weight: 450;
+            line-height: 115%;
+            letter-spacing: -0.56px;
+            transition: .4s;
+            &::after {
+              width: 100%;
+              left: 0;
+              bottom: 0;
+            }
+
+            &:hover {
+              &:hover::after {
+                width: 0;
+                left: 0;
+              }
+            }
+          }
+        }
+        & .comment {
+          padding: 20px 0 100px 0;
+          margin-bottom: 30px;
+        }
+        & input {
+          width: 100%;
+          border: none;
+          border-bottom: 1px solid rgba(23, 23, 23, 0.25);
+          padding: 20px 0;
+          margin-bottom: 15px;
+          color: var(--black-65, rgba(23, 23, 23, 0.65));
+          font-family: "Suisse Intl Regular", serif;
+          font-size: clamp(16px, 5vw, 24px);
+          font-style: normal;
+          font-weight: 400;
+          line-height: 115%; /* 27.6px */
+          letter-spacing: -0.84px;
+
+          &:focus {
+            outline: none;
+          }
+        }
+        & li {
+          cursor: pointer;
+          margin: 0 15px 15px 0;
+          display: inline-flex;
+          padding: 15px 20px;
+          justify-content: center;
+          align-items: center;
+          background-color: transparent;
+          border-radius: 360px;
+          border: 1px solid var(--black-25, rgba(23, 23, 23, 0.25));
+          color: var(--Black, #171717);
+          font-family: "Suisse Intl Regular", serif;
+          font-size: clamp(16px, 5vw, 24px);
+          font-style: normal;
+          font-weight: 400;
+          line-height: 115%; /* 27.6px */
+          letter-spacing: -0.84px;
+          transition: .4s;
+
+          &:hover {
+            background-color: black;
+            color: #fff;
+          }
+        }
+      }
+
+      & h3 {
+        color: var(--Black, #171717);
+        font-family: "Suisse Intl Book", serif;
+        font-size: clamp(16px, 5vw, 24px);
+        font-style: normal;
+        font-weight: 450;
+        line-height: 115%; /* 27.6px */
+        letter-spacing: -0.84px;
+        margin-top: 100px;
+        margin-bottom: 35px;
+      }
+    }
+  }
+
+  & .brief_text {
+    padding: 10px;
+    width: 55%;
+    & h1 {
+      color: var(--Black, #171717);
+      font-family: "Suisse Intl Book", serif;
+      font-size: clamp(28px, 5vw, 65px);
+      font-style: normal;
+      font-weight: 450;
+      line-height: 115%; /* 80.5px */
+      letter-spacing: -2.45px;
+    }
+
+    & p {
+      padding-top: 30px;
+      width: 60%;
+      color: var(--black-65, rgba(23, 23, 23, 0.65));
+      font-family: "Suisse Intl Regular", serif;
+      font-size: clamp(16px, 5vw, 21px);
+      font-style: normal;
+      font-weight: 400;
+      line-height: 115%; /* 24.15px */
+      letter-spacing: -0.735px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .brief {
+    width: 100%;
+    padding: 0;
+
+    & .brief_form {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 1.8rem;
+
+      & form {
+        & h3 {
+          font-style: normal;
+          font-weight: 450;
+          line-height: 115%; /* 18.4px */
+          letter-spacing: -0.56px;
+          margin-top: 40px;
+          margin-bottom: 30px;
+        }
+      }
+    }
+    & .brief_text {
+      width: 100%;
+
+      & h1 {
+        padding-top: 20px;
+        font-style: normal;
+        font-weight: 450;
+        line-height: 115%; /* 80.5px */
+        letter-spacing: -0.98px;
+      }
+
+      & p {
+        padding-top: 25px;
+        width: 60%;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 115%; /* 24.15px */
+        letter-spacing: -0.56px;
+      }
+    }
+  }
+}

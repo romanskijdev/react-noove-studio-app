@@ -1,0 +1,41 @@
+.privacy_page {
+  width: 90%;
+  padding: 85px 40px;
+  text-align: left;
+
+  & h1 {
+    color: var(--Black, #171717);
+    font-family: "Suisse Intl Book", serif;
+    font-size: clamp(28px, 5vw, 65px);
+    padding-bottom: 140px;
+    font-style: normal;
+    font-weight: 450;
+    line-height: 115%; /* 80.5px */
+    letter-spacing: -2.45px;
+  }
+
+  & div {
+    padding-bottom: 60px;
+
+    & h2 {
+      padding-bottom: 30px;
+      color: var(--Black, #171717);
+      font-family: "Suisse Intl Book", serif;
+      font-size: clamp(21px, 5vw, 32px);
+      font-style: normal;
+      font-weight: 450;
+      line-height: 115%;
+      letter-spacing: -1.12px;
+    }
+
+    & p {
+      color: var(--black-85, rgba(23, 23, 23, 0.85));
+      font-family: "Suisse Intl Regular", serif;
+      font-size: clamp(14px, 5vw, 18px);
+      font-style: normal;
+      font-weight: 400;
+      line-height: 135%;
+      letter-spacing: -0.09px;
+    }
+  }
+}

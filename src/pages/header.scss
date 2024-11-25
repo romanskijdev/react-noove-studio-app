@@ -1,0 +1,54 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 25px 50px;
+  font-size: clamp(14px, 5vw, 18px);
+  text-decoration: none;
+  color: #171717;
+  align-items: center;
+
+  & p, & .link,  {
+    color: #171717;;
+    font-family: "Suisse Intl Book", serif;
+    text-decoration: none;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 450;
+    line-height: 115%;
+    letter-spacing: -0.63px;
+    & .clock {
+      animation: anima .7s alternate infinite;
+      font-size: 18px;
+    }
+  }
+}
+
+@keyframes show {
+  0% { opacity: 0 }
+  100% { opacity: 1 }
+}
+
+@keyframes anima {
+  0% { opacity: 1 }
+  100% { opacity: 0 }
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 20px 10px;
+
+    & p, & .link {
+      & .header_city {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 430px) {
+  .header {
+    & p {
+      display: none;
+    }
+  }
+}
